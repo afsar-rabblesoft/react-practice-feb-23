@@ -8,8 +8,9 @@ export const Card = (props) => {
             <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style={{width:'100%'}}/>
 
                 <h4><b>{props.name}</b></h4>
+                <p><button onClick={props.onChangeName} className="button">Change Name</button></p>
                 <p>Work Status: {props.title}</p>
-                <p>{props.children}</p>
+                <div>{props.children}</div>
             </div>
         </div>
     )

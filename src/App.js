@@ -1,6 +1,10 @@
 import Card from './Card';
-
+import React ,{useState} from 'react';
 function App() {
+  const [name,setName]=useState('Ankush');
+  const changeNameHandler=(name)=>{
+    setName(name)
+  }
   const buttonsMarkup = (
     <div>
       <button className="button">YES</button>
@@ -10,11 +14,13 @@ function App() {
   return (
     <div className="App">
       <h1>Hello</h1>
-      <Card name='Himanshu' title="Working">
+      <button className="button" onClick={()=>changeNameHandler('Himanshu')}>Change Name</button>
+
+      <Card name={name} title="Working" onChangeName={()=>changeNameHandler('Afsar')}>
         {buttonsMarkup}
       </Card>
 
-      <Card name='Ankush' title="Working">
+      {/* <Card name='Ankush' title="Working">
         {buttonsMarkup}
       </Card>
 
@@ -24,7 +30,7 @@ function App() {
 
       <Card name='Afsar' title="Learning React">
         {buttonsMarkup}
-      </Card>
+      </Card> */}
 
     </div>
   );
