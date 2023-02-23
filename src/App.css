@@ -28,3 +28,14 @@
 
 .button-blue {background-color: #008CBA;} /* Blue */
 .button-red {background-color: #f44336;} /* Red */ 
+
+.text{
+  font-weight: bold;
+  color: black;
+}
+.yello{
+  background-color: yellow;
+}
+.blue{
+  background-color: blue;
+}
