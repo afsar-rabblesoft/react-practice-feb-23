@@ -2,6 +2,9 @@ import Card from './Card';
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
+import ComponentA from './Component/ComponentA';
+export const NameContext = React.createContext()
+export const ColorContext = React.createContext()
 const theme = {
   primary: '#4caf50',
   pinkish: 'pink'
@@ -61,6 +64,11 @@ function App() {
   return (
     <div className="App">
       <h1>Hello</h1>
+      <NameContext.Provider value={'Afsar'} >
+        <ColorContext.Provider value={'red'}>
+        <ComponentA />
+        </ColorContext.Provider>
+      </NameContext.Provider>
       {/* <Button>Toggle</Button>
       <button className={classes.join(' ')} onClick={toggleShowCard}>Toggle Show/Hide</button> */}
       {cardMArkup}
