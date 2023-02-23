@@ -10,6 +10,7 @@ export const Card = (props) => {
                 <h4><b>{props.name}</b></h4>
                 <p><button onClick={props.onChangeName} className="button">Change Name</button></p>
                 <p>Work Status: {props.title}</p>
+                <input type="text"  value={props.name} onChange={props.onChangeInput}/> 
                 <div>{props.children}</div>
             </div>
         </div>

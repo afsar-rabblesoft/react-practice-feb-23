@@ -5,6 +5,9 @@ function App() {
   const changeNameHandler=(name)=>{
     setName(name)
   }
+  const changeInputHandler=(event)=>{
+    setName(event.target.value)
+  }
   const buttonsMarkup = (
     <div>
       <button className="button">YES</button>
@@ -16,7 +19,7 @@ function App() {
       <h1>Hello</h1>
       <button className="button" onClick={()=>changeNameHandler('Himanshu')}>Change Name</button>
 
-      <Card name={name} title="Working" onChangeName={()=>changeNameHandler('Afsar')}>
+      <Card name={name} title="Working" onChangeName={()=>changeNameHandler('Afsar')} onChangeInput={changeInputHandler}>
         {buttonsMarkup}
       </Card>
 
